@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="clyky.ontimenotification.activities.MainActivity"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/txtSeconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:hint="Inserire"
+            android:textSize="15sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/button"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prossima notifica fra:"
+            android:textSize="15sp"
+            android:layout_alignTop="@id/txtSeconds"
+            android:layout_alignBottom="@id/txtSeconds"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/txtSeconds"
+            android:text="secondi"
+            android:textSize="15sp"
+            android:layout_alignTop="@id/txtSeconds"
+            android:layout_alignBottom="@id/txtSeconds"
+            android:gravity="center"/>
+
+        <Button
+            android:onClick="setupNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attiva"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/button"/>
+    </RelativeLayout>
+</LinearLayout>
